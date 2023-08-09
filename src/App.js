@@ -1,11 +1,15 @@
+// Import React and the required styles.
 import React from "react";
 import "./App.css";
 
+// Define the main App component.
 const App = () => {
-  const [todos, setTodos] = React.useState([]);
-  const [todo, setTodo] = React.useState("");
-  const [statusFilter, setStatusFilter] = React.useState("All");
+  // State variables to manage the todo list and its interactions.
+  const [todos, setTodos] = React.useState([]); // Array of todos
+  const [todo, setTodo] = React.useState("");   // Current todo input
+  const [statusFilter, setStatusFilter] = React.useState("All"); // Filter status for todos
 
+  // Load todos from local storage when component mounts.
   React.useEffect(() => {
     const json = localStorage.getItem("todos");
     const loadedTodos = JSON.parse(json);
@@ -14,11 +18,13 @@ const App = () => {
     }
   }, []);
 
+  // Update local storage when todos change.
   React.useEffect(() => {
     const json = JSON.stringify(todos);
     localStorage.setItem("todos", json);
   }, [todos]);
 
+  // Function to handle adding a new todo.
   function handleSubmit(e) {
     e.preventDefault();
     const newTodo = {
@@ -30,11 +36,13 @@ const App = () => {
     setTodo("");
   }
 
+  // Function to delete a todo by ID.
   function deleteTodo(id) {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   }
 
+  // Function to toggle the completion status of a todo.
   function toggleComplete(id) {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -48,6 +56,7 @@ const App = () => {
     setTodos(updatedTodos);
   }
 
+  // Filter todos based on the selected status.
   const filteredTodos = todos.filter((todo) => {
     if (statusFilter === "All") return true;
     if (statusFilter === "Completed") return todo.completed;
@@ -55,9 +64,11 @@ const App = () => {
     return true;
   });
 
+  // Render the UI.
   return (
     <div id="todo-list">
       <h1>Todo List</h1>
+      {/* Form to input new todos */}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -66,6 +77,7 @@ const App = () => {
         />
         <button type="submit">Add Todo</button>
       </form>
+      {/* Filter buttons */}
       <div id="status-indicators">
         <button
           className="status-indicator-single"
@@ -86,6 +98,7 @@ const App = () => {
           Uncompleted
         </button>
       </div>
+      {/* Display filtered todos */}
       {filteredTodos.length === 0 ? (
         <p>{todos.length === 0 ? "No tasks yet." : "All tasks completed."}</p>
       ) : (
@@ -110,4 +123,6 @@ const App = () => {
   );
 };
 
+// Export the App component as the default export.
 export default App;
+
