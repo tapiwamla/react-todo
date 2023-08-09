@@ -1,4 +1,4 @@
-# Todo List App
+# React Todo
 
 The Todo List App is a simple web application that allows you to manage and organize your tasks in a user-friendly interface. You can add new tasks, mark them as completed, and filter tasks based on their completion status. The app also utilizes local storage to store your tasks so you can access them even after refreshing the page.
 
@@ -50,13 +50,5 @@ The Todo List App is a simple web application that allows you to manage and orga
 - React: JavaScript library for building user interfaces.
 - CSS: Styling for the application's user interface.
 - Local Storage: Web browser feature used for storing tasks locally.
-
-## Contributing
-
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
