@@ -1,89 +1,123 @@
+/* Global styles */
+/* Apply a dark background color to all elements */
 * {
     background-color: #282C34;
 }
+
+/* Styles for the main header */
 h1 {
     text-align: center;
     color: #fff;
 }
+
+/* Styles for the todo list container */
 #todo-list {
-  width: 500px;
-  margin: 60px auto;
-  color: #fff;
-  font-weight: 500;
-}
-form, .todo {
-    border: 2px solid grey;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-}
-form {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  padding: 0;
-  border: none;
-}
-form input {
-  padding: 4px 8px;
-  flex-grow: 1;
-  margin-right: 16px;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-.todo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    font-weight: 500;
 }
 
-button {
-  font-size: 16px;
-  background-color: #f0eac5;
-  color: #282c34;
-  border-radius: 8px;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
+/* Styles for forms and individual todos */
+form, .todo {
+    border: 2px solid grey;
+    padding: 10px 20px;
+    margin-bottom: 10px;
 }
+
+/* Styles for the input form */
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0;
+    border: none;
+}
+
+/* Styles for the input field within the form */
+form input {
+    padding: 4px 8px;
+    flex-grow: 1;
+    margin-right: 16px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Styles for individual todos */
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for buttons */
+button {
+    font-size: 16px;
+    background-color: #f0eac5;
+    color: #282c34;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Hover and active styles for buttons */
 button:hover, button:active {
     background: #fff;
 }
+
+/* Remove the outline when button is focused */
 button:focus {
-  outline: 0;
+    outline: 0;
 }
-input[type='text'] { font-size: 20px; font-family: monospace; }
+
+/* Styles for text input field */
+input[type='text'] {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+/* Styles for checkbox input within todos */
 .todo input[type="checkbox"] {
-  transform: scale(1.8) translateY(1px);
-  margin: 0 16px 0 0;
-  cursor: pointer;
+    transform: scale(1.8) translateY(1px);
+    margin: 0 16px 0 0;
+    cursor: pointer;
 }
-.todo-text input {
-  padding: 4px;
-}
+
+/* Styles for text within a todo */
 .todo-text {
-  font-size: 24px;
-  line-height: 24px;
-  margin-bottom: 16px;
-  display: flex;
-  margin-top: 2px;
-  margin-bottom: -1px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    margin-top: 2px;
+    margin-bottom: -1px;
 }
+
+/* Styles for completed todos */
 .todo-completed {
-  display: flex;
-  margin: 10px 0;
+    display: flex;
+    margin: 10px 0;
 }
+
+/* Styles for todo action buttons */
 .todo-actions {
     display: flex;
     justify-content: flex-end;
 }
+
+/* Styles for status filter indicators */
 #status-indicators {
     margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
 }
+
+/* Styles for individual status indicator buttons */
 .status-indicator-single {
     margin-left: 5px;
     border-radius: 0;
 }
+
