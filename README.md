@@ -21,7 +21,7 @@ The Todo List App is a simple web application that allows you to manage and orga
 2. Navigate to the project directory:
 
    ```
-   cd todo-list-app
+   cd react-todo
    ```
 
 3. Install the required dependencies using a package manager of your choice:
